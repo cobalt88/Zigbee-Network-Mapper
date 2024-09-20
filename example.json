@@ -1,0 +1,57 @@
+{
+	"Resort": "Disney's Grand Floridian Resort & Spa",
+	"PAN_ID": "0x3711 (14097)",
+	"PAN_Name": "GF 4022 00:17:7A:02:22:E9 ",
+	"Gateway": {
+		"FriendlyName": "GF 4022",
+		"MAC": "00:00:00:00:00:00",
+		"IEEEAddress": "00177A01000122E9",
+		"Children": [
+			{
+				"DeviceType": "Router",
+				"FriendlyName": "4022",
+				"MAC": "00:00:00:00:00:01",
+				"NetworkAddress": "0x0001",
+				"IEEEAddress": "00177A01000547B8",
+				"AverageDeviceLQI": 0.75,
+				"LastLQI": 0.8,
+				"LastLQITimestamp": "2019-01-01T00:00:00Z",
+				"Children": [
+					{
+						"DeviceType": "EndDevice",
+						"FriendlyName": "GF4021. Lock",
+						"MAC": "00:00:00:00:00:02",
+						"NetworkAddress": "0x1854",
+						"IEEEAddress": "00177A01000547B9",
+						"AverageDeviceLQI": 0.75,
+						"LastLQI": 0.8,
+						"LastLQITimestamp": "2019-01-01T00:00:00Z",
+						"TotalPathLQI": 0.5
+					},
+					{
+						"DeviceType": "EndDevice",
+						"FriendlyName": "GF4022. Lock",
+						"MAC": "00:00:00:00:00:02",
+						"NetworkAddress": "0x1854",
+						"IEEEAddress": "00177A01000547B9",
+						"AverageDeviceLQI": 0.75,
+						"LastLQI": 0.8,
+						"LastLQITimestamp": "2019-01-01T00:00:00Z",
+						"TotalPathLQI": 0.5
+					}
+				]
+			},
+			{
+				"DeviceType": "Router",
+				"FriendlyName": "4021",
+				"MAC": "00:00:00:00:00:01",
+				"NetworkAddress": "0x0c23",
+				"IEEEAddress": "00177A01000550EF",
+				"AverageDeviceLQI": 0.75,
+				"LastLQI": 0.8,
+				"LastLQITimestamp": "2019-01-01T00:00:00Z",
+				"Children": null
+			}
+		]
+	}
+}
