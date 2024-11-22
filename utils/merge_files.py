@@ -28,8 +28,3 @@ def convert_to_json(file_name):
   input_file = open(f'./merged_data/{file_name}')
   lines = input_file.readlines()
   print(lines[15])
-
-
-# print(filtered_file_names)
-
-merge_files()

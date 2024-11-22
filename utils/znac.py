@@ -82,12 +82,11 @@ def calculate_addresses(max_depth, max_children, max_routers):
             }
         # Overwrite the previous_parents list with the new_parents list for the next iteration
         previous_parents = new_parents
-  # format the hex address keys to be 04x hex strings
   
                
   return addresses
 
-def main(*args):
+def znac(*args):
   # Static input option
 
   max_depth = 5
@@ -110,8 +109,20 @@ def main(*args):
   # output the address_lookup dictionary to a json file, overwriting the file if it already exists, or creating a new file if it does not exist. Write in a readable format
   with open("address_lookup.json", "w") as file:
     json.dump(address_lookup, file, indent=4)
+
+  # list_addresses = []
+  # for key in address_lookup:
+  #   new_dict = {}
+  #   new_dict["address"] = key
+  #   new_dict["type"] = address_lookup[key]["type"]
+  #   new_dict["depth"] = address_lookup[key]["depth"]
+  #   new_dict["decimal_address"] = address_lookup[key]["decimal_address"]
+  #   new_dict["parents"] = address_lookup[key]["parents"]
+  #   list_addresses.append(new_dict)
+
+  # with open("address_lookup_list.json", "w") as file:
+  #   json.dump(list_addresses, file, indent=4)
   
   print("Address lookup dictionary created and saved to address_lookup.json")
 
 
-main()

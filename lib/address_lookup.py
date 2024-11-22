@@ -1,4 +1,4 @@
-{
+ztree_addresses = {
     "0x0000": {
         "type": "Gateway",
         "depth": 0,

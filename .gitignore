@@ -2,3 +2,5 @@ converted_data/*
 data_to_convert/*
 merged_data/*
 input.csv
+*.json
+__pycache__
