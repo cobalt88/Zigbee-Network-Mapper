@@ -5,34 +5,22 @@ import pandas as pd
 import sys
 
 def lqi_comp_report():
-  # Historical Compairison Timestamp
+  
   with open('./lib/grouped_devices.json', 'r') as file:
-    current_data = json.load(file)
+    most_recent_data = json.load(file)
 
 # get all the resort keys from the current_data JSON
   resort_keys = set()
-  for pan in current_data:
+  for pan in most_recent_data:
     if len(pan["Resort Key"]) == 2:
       resort_keys.add(pan["Resort Key"])
 
   resort_keys = list(resort_keys)
+  print(resort_keys)
 
 
   hct = datetime.datetime.fromisoformat("2024-06-13T15:22:14.000+00:00")
-  historical_lqi = mongo.pan_collection.find(
-    {"Export Timestamp": hct, "Resort Key": {"$in": list(resort_keys)}},
-      {
-        "_id": 0,
-        "Devices": {
-          "PAN name": 1,
-          "NodeType": 1,
-          "Total Path (average) LQI": 1,
-          "Room": 1,
-          "RT Name": 1,
-          "IEEE address": 1,
-          "Resort Key": 1
-        }
-      }).to_list()
+  current_data_timestamp = datetime.datetime.fromisoformat("2024-11-22T10:40:21.000+00:00") 
 
   # for each Resort Key generate reports for the LQI values of the devices in the current data set compared to the historical data set.
 
@@ -40,12 +28,53 @@ def lqi_comp_report():
   
   for resort in resort_keys:
     try:
+      historical_lqi = mongo.pan_collection.find(
+        {"Export Timestamp": hct, "Resort Key": {"$eq": resort}},
+          {
+            "_id": 0,
+            "Devices": {
+              "PAN name": 1,
+              "NodeType": 1,
+              "Total Path (average) LQI": 1,
+              "Room": 1,
+              "RT Name": 1,
+              "IEEE address": 1,
+              "Resort Key": 1
+            }
+          }).to_list()
+
+      current_data = mongo.pan_collection.find(
+        {"Export Timestamp": {"$gte": current_data_timestamp}, "Resort Key": {"$eq": resort}},
+          {
+            "_id": 0,
+            "Devices": {
+              "PAN name": 1,
+              "NodeType": 1,
+              "Total Path (average) LQI": 1,
+              "Room": 1,
+              "RT Name": 1,
+              "IEEE address": 1,
+              "Resort Key": 1
+            }
+          }).to_list()
+
+      print(f"Found {len(historical_lqi)} historical PANs and {len(current_data)} current PANs")  
       print(f"Generating LQI comparison report for {resort}")
       previous_end_nodes = []
       current_end_nodes = []
 
       count_of_previous_gateways = 0
       count_of_current_gateways = 0
+
+      for pan in historical_lqi:
+        try:
+          for device in pan["Devices"]:
+            if device["NodeType"] == "Gateway" and device["Resort Key"] == resort:
+              count_of_previous_gateways += 1
+        except:
+          print(f"Error in Historical Gateways PAN: {pan["Pan name"]}")
+          print("Error:", sys.exc_info())
+          continue
 
       for pan in historical_lqi:
         try:
@@ -72,15 +101,6 @@ def lqi_comp_report():
           print("Error:", sys.exc_info())
           continue
 
-      for pan in historical_lqi:
-        try:
-          for device in pan["Devices"]:
-            if device["NodeType"] == "Gateway" and device["Resort Key"] == resort:
-              count_of_previous_gateways += 1
-        except:
-          print(f"Error in Historical Gateways PAN: {pan["Pan name"]}")
-          print("Error:", sys.exc_info())
-          continue
 
       for pan in current_data:
         try:
@@ -104,7 +124,7 @@ def lqi_comp_report():
           end_node["% Change in LQI"] = 0
           end_node["LQI Points Difference"] = 0
 
-      with open(f"./lib/lqi_comp_report.json{resort}", 'w') as file:
+      with open(f"./lib/lqi_comp_report_{resort}.json", 'w') as file:
         json.dump(current_end_nodes, file, indent=4)
 
       # create a flat CSV of the JSON data - only include the fields we need in the report, Total path LQI, historical, Room, % change, and LQI points difference. Round all values to the nearest 2 decimeals.
@@ -112,7 +132,7 @@ def lqi_comp_report():
       df = pd.DataFrame(current_end_nodes)
       df = df[["Room", "Total Path (average) LQI", "Historical Total Path LQI", "% Change in LQI", "LQI Points Difference", "Resort Key"]]
       df = df.round(2)  
-      df.to_csv('./lib/lqi_comp_report.csv', index=False)
+      df.to_csv(f'./lib/lqi_comp_report{resort}.csv', index=False)
     except:
       print(f"Error generating report for {resort}")
       print("Error:", sys.exc_info())

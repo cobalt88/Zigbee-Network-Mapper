@@ -3,15 +3,1031 @@ import json
 
 # The dataset as a multiline string
 data = """
+1. Add GW to 4447 2. Connect EN 4447 to GW 4447
+See CS7185
+1. Add GW to 7222 2. Connect EN 7222, 7221 to GW 7222 3. Add RT to 7322 4. Connect En 7321, 7321 to RT 7322 5. Connect RT 7322 to GW 7222
+1. Add GW to 5420 2. Connect EN 5420, 5320
+1. Add GW to 7211 2. Connect EN 7211, 7212 to GW 7211 3. Move RT 7212 to room 7111 4. Connect EN 7111, 7112 to RT 7111
+CS7321
+See CS7331
+See CS8125
+
+1. Add GW to 3479 2. Connect EN 3479, 3379 to GW 3479 3. Remove RT 3479 4. Remove CRT 3379
+1. Add GW to 7241 2. Connect EN 7241, 7242 to GW 7241 3. Move RT 7241 to Room 7141 4. Connect RT 7141 to GW 7241 5. Connect EN 7141, 7142 to RT 7141
+1. Add GW to 7692 2. Connect EN 7692, 7691 to GW 7692 3. Move RT 7593 to 7592 4. Connect EN 7593 to 7693 5. Connect EN 7592, 7591 to RT 7592
+
+
+1. Adjust RT 1154 and GW 1254
+1. Add GW to 1457 2. Connect RT 1356 to GW 1457 3. connect EN 1457
+1. Remove RT 2220 2. Connect EN 2120,2121, 2221, 2220, 2320, 2321 to GW 2220
+1. REmove RT 7245 2. Adjust the RT in 7345 3. Adjust the GW in 7245
+See CS7153
+
+
+1. Add GW to 7251 2. Move RT 7253 to 7351 3. Connect EN 7251, 7252 to GW 7251 4. Connect RT 7351 to GW 7251
+See CS1345
+1. Connect RT 1355 to GW 1454 2. Adjust RT 1355 and GW 1454
+1. Add GW to 3281 2. Connect RT 3181 to GW 3281
+1. Add GW To 3493 2. Connect EN 3493, 3494 to GW 3493 3. Remove CRT 3493 4. Remove RT 3493 5. Connect RT 3393 to GW 3493
+1. Add GW to 7271 2. Connect EN 7271, 7272 to GW 7271 3.  Connect RT 7171, 7371 to GW 7271
+1. Remove CRT in 2323 2. WAI
+
+See CS7111
+1. Connect EN 7500 to GW 7600
+
+See CS7351
+See CS7371
+1.  Add GW to 8242 2. Connect EN 8242, 8241 to GW 8241 3. Connect RT 8142 to GW 824
+
+1. Add GW to 8621 2. Connect EN 8622, 8621 to GW 8621 3. Connect RT 8521 to GW 8622
+See CS8142
+1. Remove CRT 2330 2. Ensure that there are not two 2131 RT 3. Add RT to 2330 4. Connect EN 2330, 2331 to RT 2330
+1. Add GW to 8246 2. Connect EN 8245, 8246 to GW 8246 3. Connect RT 8146 to GW 8246
+See CS1134
+1. Add GW to 3450 2. Connect EN 3450 to GW 3450
+1. Adjust the GW in 6302
+See CS7344
+1. Add GW to 7271 2. Move RT 7273 to 7371 3. Connect EN 7271, 7272 to GW 7271 4. Connect RT 7371 to GW 7271
+1. Add GW to 7281 2. Move RT 7283 to 7381 3. Connect EN 7281, 7282 to GW 7281 4. Connect RT 7381 to GW 7281
+1. Add GW to 5440 2. Connect EN 5440, 5340 to GW 5440
+1. Add GW to 5447 2. Connect EN 5447, 5347 to GW 5447
+1. Add GW at 4420 2. Connect EN 4420 to GW
+1. Add GW to 3490 2. Connect EN 3490, 3390 to GW 3490
+1. Add GW to 3484 2. Connect EN 3484,3483 to GW 3484 3. Remove CRT 3483 4. Remove RT 3484 5. Remove RT 3435
+1. Connect EN 6663, 6563, 6763 to GW 6663 2. Remove RT6663 3. Adjust GW in 6663
+1. Add GW to 7291 2. Move RT 7293 to 7391 3. Connect EN 7291, 7292 to GW 7291 4. Connect RT 7391 to GW 7291
+See 7101
+1. Connect EN to RT 3331
+1. Add GW to 3221 2. Connect EN 3321, 3322 to RT 3321 Second Door 3. Remove RT 3221 4
+1. Adjust RT in 3130
+1. Add GW to 6272 2. Move RT 6272 to room 6172 3. Connect EN 6272, 6272 to GW 6272 4. Connect 6171,6172 to RT 6172 5. Connect RT 6172 to GW 6272
+See CS6551
+1. Add GW to 8109 2. Connect RT 8109 to GW 8209 3. Connect EN 8109, 8110 to GW 8109
+1. Add GW to 5427 2. Connect EN 5427, 5327
+1. Remove RT in 2215 2. Adjust RT in 2315
+1. Add GW to 3480 2. Connect EN 3480 to GW 3480 3. Remove RT 3480 4. Connect EN 3380, 3480 to GW 3480
+1. Connect EN 3190 to GW 9290
+See CS3480
+See CS3481
+1.Working As Intended
+1. Connect EN 7168 to RT 7167
+1. Add GW to 7641 2. Add RT to 7741 3. Connct EN 7741, 7742 to RT 7741 4. Connect RT 7741 to GW 7641
+1. Connect RT 1354 to GW 1454 2. adjust the GW 1454 and rt 1254
+1. Add GW at 4467 2. Connect EN 4367, 4467 to GW
+1. Add GW to 8241 2. Connect EN 8672, 8671 to GW 8671 3. Connect RT 8571 to GW 8671
+See CS1135
+1.WAI
+1. Add GW at 4440 2. Connect EN 4440 to GW
+1. Ensure that there isnt an extra RT in 5354 2. Add GW to 5254 3. Connect RT 5354 to GW 5254 4. Connect EN 5245, 5253 to GW 5254
+1. Add GW to 7201 2. Connect EN 7201, 7202 to GW 7201 3. Move RT 7201 to Room 7101 4. Connect RT 7101 to GW 7201 5. Connect EN 7101, 7102 to RT 7101
+See CS7141
+1. Connect EN 7270, 7370, 7170 to GW 3. Remove RT 7270
+1. Connect 8202 to GW 8203
+1. Connect EN 8123 to GW 8223
+See CS8502
+See CS7157
+1. Remove RT 1210 2. Connect EN 1110, 1210, 1310 to GW 1210
+1. Add GW to 1451 2. Remove RT 1451 3. Connect EN 1450, 1451, 1452
+1. Connect EN 3122 to RT 3123 2. make sure its the door closest to 3123
+Lock 1. Add GW to 5211 2. Connect EN 5212, 5211 to GW 5211 3. Connect RT 5111 to GW 5211
+1. Add GW at 4427 2. Connect EN 4427 to GW
+1. Adjust the GW in 623
+1. Add GW to 8602. Connect EN 8602, 8601 to GW 8602 3. Connect RT 8502 to GW 8602
+1. Connect EN to RT 3145
+Lock 1. Connect RT 5102 to GW 5202
+
+See CS7621
+1. Adjust the RT in 1152 2. Adjust the GW in 1252
+See CS2322
+1. Add GW to 7672 2. Connect EN 7672, 7671 to GW 7672 3. Move RT 7672 to 7572
+
+
+1. Add GW to 2440 2. Connect EN 2340, 2440 to GW 2440
+1. Add GW to 3264 2. Connect EN 3164 to GW 3264
+1. Adjust the GW 1284 and RT 1184
+1. Adjust RT in 7345 2. Adjust GW 7243 3. Remove RT 7243 4. Connect EN 7243, 7244 to GW 7244
+1. Add GW to 7651 2. Connect EN 7651, 7652 to GW 7651 3. Move RT 7651 to 7551 4. Connect EN 7551, 7552 to RT 7551
+Lock See CS5101
+1. Adjust GW 1216 and RT 1316
+1. Connect EN 3133 to RT 3132
+1. Adjust the RT in 7153 2. Adjust the GW in 7253 3. Remove RT 7253
+1. Adjust RT 1387 and GW 1287
+1. Connect EN 6544 to RT 6543
+1. WAI
+1. WAI
+1. WAI 2. CRT Present may need to be removed
+1. WAI
+1. Connect EN 2323, 2322 to RT 2322 2. Remove CRT 2323 if not removed already
+1. WAI
+1. Connect EN 8153 to GW 8254
+See CS6551
+1. Adjust GW 1220
+See CS3314
+1.  Move RT 4340 to 4341 2. Connect En 4340 to GW 4440
+1. Add GW 3457 2. Connect EN 3457 to GW 3457 3. Remove RT 3457
+1. Adjust the GW in 623
+1. Add GW to 2457 2. Connect EN 2457, 2456 to GW 2457 3. Remove RT 2456
+1. remove CRT 2323 2. Remove RT 2223 3. Add RT to 2321 4. Connect EN 2321 to RT 2321 5. Connect RT 2321 to GW 2220
+See CS1184
+1. WAI
+See CS3481
+1. Add GW to 4450 2. Connect EN 4450 to GW 4450
+See CS 1353
+1. Adjust the RT in 7157 2. Adjust the RT in 7257 3. Remove RT in 7257 4. connect EN 7257, 7258 to GW 7257
+1. Connecta 8208 to GW8208
+See CS1151
+See CS3478
+See CS4354
+See CS5331
+1. Connect EN 8124, 8224 to GW 8224 2. Remove RT 8224
+1. Adjust RT in 2343 2. Remove RT 2442 3. Connect EN 2442 to GW 2442 4. Connect RT 2343 to GW 2442
+1. Add GW to 6641 2. Connect EN 6641, 6642 to GW 6641 3. Connect RT 6541, 6741 to GW 6641
+Lock 1. Add GW to 5231 2. Connect EN 5232, 5231 to GW 5231
+1. Add GW to 7261 2. Move RT 7263 to 7361 3. Connect EN 7261, 7262 to GW 7261 4. Connect RT 7361 to GW 7261
+1. Adjust RT in 3127
+1. Adjust the RT 1346 and GW 1247
+1. Connect RT 3191 to GW 3291
+See CS3469
+See CS6172
+1. Add GW to 7661 2. Connect EN 7661, 7662 to GW 7661 3. Move RT 7661 to 7561 4. Add RT to 7761 5. Connect EN 7761, 7762 to RT 7761 6. Connect EN 7561, 7562 to RT 7561 7. Connect RT 7761, 7561 to GW 7661
+1. Add GW to 8225 2. Connect En 8225, 8226 to GW 8225 3. Connect RT 8125 to GW 8225
+1. Add GW to 8681 2. Connect EN 8682, 8681 to GW 8681 3. Connect RT 8581 to GW 8681
+1. Adjust the RT in 3176 and the GW in 3276
+1. Adjust the RT in 2384
+CS2343
+1. Connect EN 2183 to GW 2282 2. Adjust GW 2282
+1. Adjust RT 1176 and GW 1277
+1. Remove RT 1280 2. Connect EN 1280, 1281 to GW 3. Adjust RT 1180 and GW 1280
+1. Adjust RT 1384 and GW 1284
+1. WAI
+1. Remove CRT 2310, 2110 2. Remove RT 2210 3. Connect EN 2210. 2110, 2310 to GW 2210
+Lock 1. Add GW to 5161 2. Move RT 5162 to room 5161 3. Connect RT 5161 to GW 5261
+
+1. Remove RT 7230 2. Connect EN 7130, 7230, 7330 to GW 7230
+1. Add GW to 7695 2. Move RT 7597 to room 7595 3. Connect EN 7595, 7596 to RT 7595 4. Connect RT 7595 to GW 7695
+1. Adjust RT in 4321 2. Connect RT 4321 to GW 4222
+1. Add GW to 6262 2. Connect EN 6262, 6261 to GW 6262 3. Move RT 6261 to room 6162 4. Connect EN 6161, 6162 to RT 6161 5. Connect RT 6162 to GW 6262
+Lock 1. Adjust RT in 5122 2. Adjust GW in 5222
+See CS7621
+See CS2361
+1. Connect EN 2332
+See CS3334
+1. Add GW 3455 2. Connect En 3455, 3456 to GW 3455 3. Remove CRT 3455 4. Remove RT 3455
+Lock See CS5161
+1. Remove CRT 2251 2. Add GW to 2450 3. Connect EN 2450, 2450 to GW 2450 4. Connect RT 2351 to GW 2450 5. Connect EN 2350, 2351 to RT 2350
+See CS6551
+1. Move RT 2213 to 2313 2. Connect EN 2312, 2313 to RT 2313 3. connect RT 2313 to GW 2213
+1. Connect EN 3472 to GW 3473
+See CS7172
+1. Add RT to 7731 2. Connect EN 7731 to RT 7731
+1. Add GW to 7641 2. Connect RT 7541 to GW 7641
+1. Add GW to 4460 2. Connect EN 4460 to GW 4460 3. Remove RT 4460
+1. Remove CRT 1157 2. Connect EN 1157,1156 to RT 1155 3. Connect RT1155 to GW 1257 4. Adjust the GW 1257 and RT 1255
+See CS2350
+See CS3314
+Lock See 5112
+Lock See CS5141
+1. Add GW to 6651 2. Connect EN 6551, 6552 to GW 6651 3. Connect RT 6551,6751 to GW 6651
+1. Connect EN 7597 to GW 7697
+See CS5422
+1. WAI
+1. Add GW to 2452 2. Connect EN 2452, 2453 to GW 2452 3. Connect EN 2352 to RT 2353 4. Connect RT 2353 to GW 2452
+1. Remove RT 2447 2. Add GW to 2447 3. Connect EN 2447, 2446 to GW 2447
+See CS2352
+1. Add RT to 7752 2. Add GW to 7652 3. Connect EN 7752, 7751 to GW 7651
+See CS6741
+See CS6741
+1. Connect RT 2362 to GW 2263
+1. Connect EN 1325 to RT 1324
+1. Connect EN 1143 to GW 1244 2. adjust the RT and GW to ensure placement is correct
+See CS3322
+See CS3490
+1. Connect EN 4167 to GW 4267
+
+See CS7571
+1. Add GW To 3491 2. Connect EN 3491, 3492 to GW 3491 3. Connect RT 3391 to GW 3491
+1. Adjust the RT in 1134, 1334 2. Remove RT 1234 3. Connect EN 1234, 1235, 1233 to GW 1234
+1. Add GW to 3469 2. Connect EN 3369 to GW 3469 3. Remove RT 3469
+See CS7571
+1. Add RT to 7781 2. Connect EN  7781, 7782 to RT 7781 3. Connect RT 7781 to GW 7681
+1. Add GW to 7285 2. Connect EN 7285, 7286 to GW 7285 3. Connect RT 7185 to GW 7285
+See CS7561
+1. Adjust GW2285
+1. Connect EN 1276, 1277 to GW 1277 2. Remove RT-1277
+See CS3326
+1. Add GW to 3440 2. Connect EN 3440, 3340 to GW 3440
+1. Add GW to 4222 2. Connect EN 4222 to GW 4222
+Lock See CS5105
+See CS5354
+1. Add GW to 3447 2. Connect EN 3447 to GW 3447
+1. Adjust the RT in 3373 2. Connect RT to GW 3473
+See CS3478
+Lock 1. Add GW to 5241 2. Connect RT 5141 to GW 5241 3. Connect EN 5241, 5242 to GW 5141
+1.WAI
+See CS 7511
+1. Connect EN 8153 to GW 8253
+See CS3479
+1. Adjust the RT in 4145 2. Adjust GW in 4245
+1. Add GW to 3214 2. Move RT 3213 to 3314 3.  Connect EN 3314, 3313 to RT 3213 4. Connect EN 3113, 3114 to GW 3214
+See CS3182
+1. Add GW to 4212 2. Connect EN 4112 to GW 4212
+1. Add GW to 4256 2. Connect En 4255 to GW 4256
+1. Add GW to 6225 2. Connect EN 5225 to GW 5225 3. Remove RT 6225 4. Connect RT 6125 to GW 6225
+See CS6135
+1. Add GW to 7661 2. Connect EN 7662 to GW 7661
+See CS1134
+See CS1143
+1. Remove CRT 2110, 2310 2. Connect EN 2211, 2111 to GW2210 3. Remove RT 2210
+1. Remove CRT 2442 2. Add GW to 2440 3. Connect EN 2440, 2441 to GW 2440
+1. Remove CRT 2251 2. Connect EN 2251 to GW 2250 3. Remove RT 2250
+1. Connect EN to GW 3266
+1. Remove RT in 4443 2. Connect EN 4443, 4444 to the GW 4443
+Lock 1. Add GW to 5206 2. Connect EN 5206, 5205 to GW 5206 2. Connect RT 5106 to GW 5206
+Lock See CS5141
+1. Connect EN 7544 to RT 7543
+1. Connect EN 1380 to GW 1280
+1. Adjust the RT 1381 and GW 1280
+1. Adjust the RT in 2174 and GW in 2275
+1. Add GW to 3234 2. Connect RT 3334 to GW 3234
+Lock 1. Add GW to 5407 2. Connect EN 5407, 5307 to GW 5407
+See CS7596
+1. Connect EN 4157 to GW 4257
+1. Add GW to 6235 2. Connect EN 6235, 6236 to GW 3. Move RT 6336 to room 6135 4. Connect RT 6135 to GW 6235
+See CS6136
+See CS8681
+1. Move GW6770 to Room 6670 2. Connect EN 6670, 6570, 6770 to GW 6670
+1. Add GW to 3481 2. Connect EN 3482,3481 to GW 3481 3. Remove RT 3482 4. Connect RT 3381 to GW 3481
+1. WAI
+1. Connect to RT 3271
+1. Adjust the RT in 4342 2. Connect RT 4342 to GW 4242
+Lock 1. Add GW to 5406 2. Connect RT 5306 to GW 5406
+1. Add GW to 6661 2. Move RT 6661 to 6761 3. Connect EN 6761, 6762 to RT 6761 4. Connect EN 6661, 6662 5. Connect RT 6761 to GW 6661
+1. Adjust the GW
+1. Add GW to 7671 2. Connect EN 7671, 7672 to GW 7671 3. Move RT 7672 to 7571 4. Move RT from 7773 to 7771 5. Connect EN 7771, 7772 to RT 7771 6. Connect EN 7571, 7752 to RT 7751 7. Connect RT 7771, 7571 to GW 7671
+See CS1355
+1. Connect EN 3114 to RT 3112
+1. Add GW to 4242 2. Connect EN 4242, 4241 to GW 4242
+1. Add GW to 5406 2. Connect EN 5405, 5406 to GW 5406 3. Connect RT 5306 to GW 5406
+See CS7172
+1. WAI
+1. Move RT 2272 down to 2172 2. Connect EN 2173 to RT 2172
+1. Add GW to 3226 2. Connect EN 3326, 3325 to GW 3226
+See CS6541
+1. Add GW to 7695 2. Connect EN 7695, 7696 to GW 7695
+1. Remove RT 4421 2. Remove CRT 4421 3. Add GW to 4421 4. Connect EN 4421, 4422 to GW 4421
+1. Connect EN to GW 2275 2. Remove RT 2275
+1. Add GW to 3277 2. Connect EN 3277, 3278 to GW 3277
+See CS3464
+Lock 1. Adjust RT in 5304 2. Connect RT5304 to GW 5404
+1. Add GW to 5430 2. Connect EN 5430, 5330 to GW 5430
+1. Remove CRT 5442 2. Connect EN 5442, 5441 to GW 5441 3. Connect RT 5341 to GW5441
+See CS6551
+1. Add GW to 7611 2. Connect EN 7612, 7611 to GW 7611
+See CS7561
+See CS1157
+See CS1457
+1. Connect RT 4354 to GW 4454 2. Adjust the RT in 4454
+See CS6136
+1.Adjust RT 7103 2. Adjust GW 7203 3. Remove RT 7203 4. Connect EN 7203, 7202, 7204
+See CS7185
+1. Add GW to 1236 2. Connect RT 1136, 1336 to GW 1136 2. Connect EN 1136, 1135 to the RT 1136 3. adjust RT in 1336 4. adjust GW in 1236
+See CS1135
+
+1. Remove CRT 4462 2. Add GW to 4462 3. Remove RT 4462 4. Connect EN 4462, 4461 to GW 4462
+See CS5342
+1. Remove RT 4426 2. Remove CRT 4426 3. Add GW to 4426 4. Connect EN 4426, 4425 to GW 4426
+1. Remove CRT 4466 2. Add GW to 4466 3. Connect EN 4466, 4465, 4467 to GW 4466
+1. Connect EN 1143 to GW 1244 2. adjust the RT and GW to ensure placement is correct
+See CS1470
+1. Remove CRT 3335 2. Add GW to 3233 3. Connect EN 3233, 3234
+1. Add GW to 3281 2. Connect EN 3281, 3282 to GW 3281
+1. Add GW to 7295 2. Connect En 7295, 7296 to GW 7295 3. Add RT to 7195 4. Connect EN 7195, 7195 to RT 7195 5. Connect RT 7195 to GW 7295
+1. Add GW to 7621 2. Connect EN 7621, 7622 to GW 7611 3. Move RT 7621 to room 7721 4. Connect RT 7721 to GW 7621 5. Connect EN 7521 to GW 7621
+See CS1135
+1. Connect EN 1272 to RT 1372
+1. Connect EN to GW 2253 2. Remove RT 2253
+1. Add GW to 3445 2. Connect En 3445, 3446 to GW 3445
+1. Remove RT 7759 2. Connect EN 7759, 7659 to GW 7659 3. Remove RT 7659
+Lock See CS5105
+see CS8125
+1. Connect EN 1215 to 1214 2. remove RT 1115 3. Connect EN 1115 to RT 1114
+See CS1474
+1. Remove CRT 3335 2. Connect EN 3335 to GW 3235
+See CS4452
+Lock See 5112
+1. Add GW to 5400 2. Connect EN 5400, 5300 to GW 5400
+1. Add GW to 5431 2. Connect EN 5431, 5432 to GW 5431 3. Connect RT 5331 to GW 5431
+1. Add GW to 7611 2. Connect EN 7611, 7612 to GW 7611 3. Add RT to 7511 4. Connect EN 7511, 7512 to RT 7511 5. Connect RT 7511 to GW7611
+See CS2440
+1. Connect EN 1391 to RT 1291
+1. Remove CRT 3478 2. Add GW to 3478 3. Remove RT 3478 4. Connect EN 3478 , 3477 to GW 3478 5. Connect RT 3378 to GW 3478
+1. Add GW to 5407 2. Connect EN 5407, 5307
+See CS6135
+1. Connect EN 8523 to GW 8623
+1. Connect EN 2212 to GW 2213 2. Remove RT 2213 3. Connect EN 2313 to GW
+1. Add GW to 6232 2. Connect EN 6532, 6531 to GW 6532 3. Move RT 6531 to Room 6532 4. Connect EN 6532, 6531 to RT 6531 5. connect RT 6532 to GW 6632
+See CS3478
+1. Add GW to 4452 2. Connect EN 4451, 4452 to GW 4452 3. Remove RT 4452
+1. Add GW to 5402 2. Connect EN 5401, 5402 to GW 5401 3. Connect RT 5302 to GW 5402
+1. Add GW to 1490 2. Connect EN 1491, 1490 to GW 1490
+See CS4241
+1. Remove CRT 1473 2. Adjust the GW in 1474
+1. Add GW to 1480 2. Connect EN 1480 to GW 1480 3. Remove RT 1480 4.
+1. Remove CRT 5422 2. Add GW 5422 3. Connect EN 5422, 5421 to GW 5422
+1. Add GW 5435 2. Connect EN 5435, 5436 3. Connect RT 5335 to GW 5435
+1. Add GW to 5437 2. Connect EN 5437, 5337 to GW 5437
+1. WAI
+1. Adjust GW in 1460
+See CS1490
+See CS6135
+1. Remove CRT 3464 2. Add GW to 3464 3. Connect EN 3464, 3463 to GW 3464
+1. add GW to 1470 2. Connect EN 1470 1471 to GW 1470
+1. Add GW to 1472 2. Connect EN 1472, 1473 to GW 1472
+1. Add GW to 1477 2. Connect EN 1477, 1474 second door to GW 1477
+1. Add GW to 3291 2. Connect EN 3291, 3292 to GW 3291
+GW1210
+GW1214
+GW1216
+GW1220
+GW1224
+GW1234
+GW1234
+GW1234
+GW1236
+GW1236
+GW1236
+GW1236
+GW1236
+GW1237
+GW1244
+GW1244
+GW1247
+GW1247
+GW1252
+GW1252
+GW1254
+GW1257
+GW1257
+GW1272
+GW1277
+GW1277
+GW1277
+GW1280
+GW1280
+GW1280
+GW1284
+GW1284
+GW1284
+GW1287
+GW1291
+GW1451
+GW1453
+GW1454
+GW1454
+GW1454
+GW1457
+GW1457
+GW1460
+GW1470
+GW1470
+GW1472
+GW1474
+GW1477
+GW1477
+GW1480
+GW1490
+GW1490
+GW`
+GW`
+GW`
+GW`
+GW`
+GW`
+GW`
+GW`
+
+GW2210
+GW2211
+GW2213
+GW2213
+GW2215
+GW2220
+GW2220
+GW2223
+GW2223
+GW2230
+GW2233
+GW2251
+GW2253
+GW2263
+GW2263
+GW2272
+GW2275
+GW2275
+GW2282
+GW2285
+GW2285
+GW2350
+GW2440
+GW2440
+GW2440
+GW2442
+GW2442
+GW2447
+GW2450
+GW2452
+GW2452
+GW2457
+GW2223
+GW``
+GW``
+GW3212
+GW3214
+GW3214
+GW3214
+GW3221
+GW3221
+GW3223
+GW3226
+GW3226
+GW3227
+GW3230
+GW3232
+GW3232
+GW3233
+GW3234
+GW3234
+GW3235
+GW3245
+c
+GW3266
+GW3270
+GW3276
+GW3277
+GW3281
+GW3281
+GW3281
+GW3290
+GW3291
+GW3291
+GW3440
+GW3440
+GW3445
+GW3447
+GW3450
+GW3455
+GW3457
+GW3464
+GW3464
+GW3469
+GW3469
+GW3473
+GW3473
+GW3478
+GW3478
+GW3478
+GW3478
+GW3479
+GW3479
+GW3480
+GW3480
+GW3481
+GW3481
+GW3484
+GW3490
+GW3490
+GW3490
+GW3491
+GW3493
+GW4212
+GW4222
+GW4222
+GW4242
+GW4242
+GW4242
+GW4245
+GW4255
+GW4257
+GW4267
+GW4420
+GW4421
+GW4426
+GW4427
+GW4440
+GW4443
+GW4447
+GW4450
+GW4452
+GW4452
+GW4454
+GW4454
+GW4460
+GW4462
+GW4466
+GW4467
+GW5202
+GW5202
+GW5206
+GW5206
+GW5206
+GW5212
+GW5212
+GW5212
+GW5222
+GW5231
+GW5241
+GW5241
+GW5241
+GW5254
+GW5254
+GW5261
+GW5261
+GW5400
+GW5402
+GW5404
+GW5406
+GW5406
+GW5407
+GW5407
+GW5420
+GW5422
+GW5422
+GW5427
+GW5430
+GW5431
+GW5431
+GW5435
+GW5437
+GW5440
+GW5441
+GW5441
+GW5447
+
+
+
+GW6222
+GW6225
+GW6232
+GW6235
+GW6235
+GW6235
+GW6235
+GW6236
+GW6236
+GW6262
+GW6272
+GW6272
+GW6302
+GW6532
+GW6641
+GW6641
+GW6641
+GW6641
+GW6643
+GW6651
+GW6651
+GW6651
+GW6651
+GW6651
+GW6661
+GW6663
+GW7157
+GW7201
+GW7201
+GW7203
+GW7211
+GW7211
+GW7222
+GW7222
+GW7230
+GW7231
+GW7241
+GW7241
+GW7244
+GW7244
+GW7245
+GW7251
+GW7251
+GW7253
+GW7253
+GW7257
+GW7261
+GW7267
+GW7270
+GW7271
+GW7271
+GW7271
+GW7271
+GW7271
+GW7281
+GW7285
+GW7285
+GW7285
+GW7291
+GW7295
+GW7600
+GW7611
+GW7611
+GW7611
+GW7621
+GW7621
+GW7621
+GW7631
+GW7641
+GW7641
+GW7643
+GW7652
+GW7652
+GW7659
+GW7661
+GW7661
+GW7661
+GW7662
+GW7671
+GW7671
+GW7671
+GW7672
+GW7681
+GW7692
+GW7695
+GW7695
+GW7695
+GW7697
+GW8203
+GW8208
+GW8209
+GW8223
+GW8224
+GW8225
+GW8225
+GW8226
+GW8242
+GW8242
+GW8246
+GW8253
+GW8254
+GW8602
+GW8602
+GW8621
+GW8623
+GW8671
+GW8681
+GW8681
+GW6670
+CS1310. Lock
+CS1215. Lock
+CS1317. Lock
+CS1320. Lock
+CS1325. Lock
+CS1133. Lock
+CS1134. Lock
+CS1333. Lock
+CS1135. Lock
+CS1135. Lock
+CS1136. Lock
+CS1326. Lock
+CS1335. Lock
+CS1137. Lock
+CS1143. Lock
+CS1344. Lock
+CS1345. Lock
+CS1346. Lock
+CS1151. Lock
+CS1153. Lock
+CS1155. Lock
+CS1156. Lock
+CS1157. Lock
+CS1372. Lock
+CS1173. Lock
+CS1177. Lock
+CS1276. Lock
+CS1180 second door. Lock
+CS1380. Lock
+CS1381. Lock
+CS1183. Lock
+CS1184. Lock
+CS1383. Lock
+CS1387. Lock
+CS1391. Lock
+CS1450. Lock
+CS1354. Lock
+CS1353. Lock
+CS1355. Lock
+CS1455. Lock
+CS1356. Lock
+CS1457. Lock
+CS1460. Lock
+CS1470. Lock
+CS1471. Lock
+CS1472. Lock
+CS1474. Lock
+CS1474 second door. Lock
+CS1477. Lock
+CS1480. Lock
+CS1490. Lock
+CS1491. Lock
+CS1168. Lock
+CS1173 second door. Lock
+CS1323. Lock
+CS1368. Lock
+CS1373. Lock
+CS1374. Lock
+CS1473. Lock
+CS1487. Lock
+CS1117. Lock
+CS2310. Lock
+CS2211. Lock
+CS2212. Lock
+CS2312. Lock
+CS2314. Lock
+CS2121. Lock
+CS2321. Lock
+CS2322. Lock
+CS2323. Lock
+CS2332. Lock
+CS2330. Lock
+CS2251. Lock
+CS2252. Lock
+CS2361. Lock
+CS2362. Lock
+CS2173. Lock
+CS2174. Lock
+CS2274. Lock
+CS2183. Lock
+CS2184. Lock
+CS2385. Lock
+CS2450. Lock
+CS2340. Lock
+CS2440. Lock
+CS2442. Lock
+CS2343. Lock
+CS2344. Lock
+CS2447. Lock
+CS2350. Lock
+CS2352. Lock
+CS2452. Lock
+CS2457. Lock
+CS2122. Lock
+CS2135. Lock
+CS2160. Lock
+CS3113. Lock
+CS3114. Lock
+CS3313. Lock
+CS3314. Lock
+CS3321. Lock
+CS3322. Lock
+CS3122. Lock
+CS3325. Lock
+CS3326. Lock
+CS3126. Lock
+CS3131. Lock
+CS3133. Lock
+CS3331. Lock
+CS3233. Lock
+CS3333. Lock
+CS3334. Lock
+CS3335. Lock
+CS3145. Lock
+CS3164. Lock
+CS3166. Lock
+CS3171. Lock
+CS3175. Lock
+CS3277. Lock
+CS3181. Lock
+CS3182. Lock
+CS3282. Lock
+CS3190. Lock
+CS3191. Lock
+CS3291. Lock
+CS3341. Lock
+CS3440. Lock
+CS3445. Lock
+CS3447. Lock
+CS3450. Lock
+CS3455. Lock
+CS3457. Lock
+CS3463. Lock
+CS3464. Lock
+CS3369. Lock
+CS3469. Lock
+CS3372. Lock
+CS3472. Lock
+CS3377. Lock
+CS3378. Lock
+CS3477. Lock
+CS3478. Lock
+CS3379. Lock
+CS3479. Lock
+CS3480. Lock
+CS3481. Lock
+CS3380. Lock
+CS3381. Lock
+CS3483. Lock
+CS3382. Lock
+CS3390. Lock
+CS3490. Lock
+CS3491. Lock
+CS3493. Lock
+CS4112. Lock
+CS4222. Lock
+CS4322. Lock
+CS4241. Lock
+CS4242. Lock
+CS4342. Lock
+CS4146. Lock
+CS4255. Lock
+CS4157. Lock
+CS4167. Lock
+CS4420. Lock
+CS4421. Lock
+CS4426. Lock
+CS4427. Lock
+CS4440. Lock
+CS4444. Lock
+CS4447. Lock
+CS4450. Lock
+CS4451. Lock
+CS4452. Lock
+CS4353. Lock
+CS4354. Lock
+CS4460. Lock
+CS4462. Lock
+CS4466. Lock
+CS4367. Lock
+CS5101. Lock
+CS5102. Lock
+CS5105. Lock
+CS5106. Lock
+CS5206. Lock
+CS5112. Lock
+CS5211. Lock
+CS5212. Lock
+CS5121. Lock
+CS5232. Lock
+CS5141. Lock
+CS5142. Lock
+CS5242. Lock
+CS5354. Lock
+CS5355. Lock
+CS5162. Lock
+CS5262. Lock
+CS5400. Lock
+CS5401. Lock
+CS5303. Lock
+CS5305. Lock
+CS5405. Lock
+CS5307. Lock
+CS5407. Lock
+CS5420. Lock
+CS5421. Lock
+CS5422. Lock
+CS5427. Lock
+CS5430. Lock
+CS5331. Lock
+CS5332. Lock
+CS5435. Lock
+CS5437. Lock
+CS5440. Lock
+CS5342. Lock
+CS5442. Lock
+CS5447. Lock
+CS0521. Lock
+CS0662. Lock
+CS0721. Lock
+CS6321. Lock
+CS6125. Lock
+CS6331. Lock
+CS6135. Lock
+CS6136. Lock
+CS6235. Lock
+CS6236. Lock
+CS6335. Lock
+CS6336. Lock
+CS6162. Lock
+CS6172. Lock
+CS6272. Lock
+CS6303. Lock
+CS6532. Lock
+CS6542. Lock
+CS6641. Lock
+CS6741. Lock
+CS6742. Lock
+CS6544. Lock
+CS6551. Lock
+CS6552. Lock
+CS6651. Lock
+CS6751. Lock
+CS6752. Lock
+CS6762. Lock
+CS6563. Lock
+CS7158. Lock
+CS7101. Lock
+CS7102. Lock
+CS7104. Lock
+CS7111. Lock
+CS7112. Lock
+CS7321. Lock
+CS7322. Lock
+CS7130. Lock
+CS7331. Lock
+CS7141. Lock
+CS7142. Lock
+CS7332. Lock
+CS7343. Lock
+CS7344. Lock
+CS7345. Lock
+CS7351. Lock
+CS7153. Lock
+CS7154. Lock
+CS7157. Lock
+CS7352. Lock
+CS7168. Lock
+CS7170. Lock
+CS7172. Lock
+CS7271. Lock
+CS7272. Lock
+CS7362. Lock
+CS7371. Lock
+CS7372. Lock
+CS7185. Lock
+CS7186. Lock
+CS7285. Lock
+CS7381. Lock
+CS7295. Lock
+CS7391. Lock
+CS7500. Lock
+CS7511. Lock
+CS7612. Lock
+CS7621. Lock
+CS7721. Lock
+CS7722. Lock
+CS7732. Lock
+CS7512. Lock
+CS7742. Lock
+CS7542. Lock
+CS7544. Lock
+CS7752. Lock
+CS7759. Lock
+CS7552. Lock
+CS7561. Lock
+CS7761. Lock
+CS7662. Lock
+CS7572. Lock
+CS7771. Lock
+CS7772. Lock
+CS7571. Lock
+CS7781. Lock
+CS7592. Lock
+CS7595. Lock
+CS7596. Lock
+CS7695. Lock
+CS7597. Lock
+CS8202. Lock
+CS8208. Lock
+CS8110. Lock
+CS8123. Lock
+CS8124. Lock
+CS8125. Lock
+CS8126. Lock
+CS8225. Lock
+CS8141. Lock
+CS8142. Lock
+CS8246. Lock
+CS8153. Lock
+CS8154. Lock
+CS8502. Lock
+CS8601. Lock
+CS8622. Lock
+CS8523. Lock
+CS8572. Lock
+CS8681. Lock
+CS8682. Lock
+CS8801. Lock
+CS8810. Lock
+CS8822. Lock
+CS8829. Lock
+CS8830. Lock
+CS8902. Lock
+CS8909. Lock
+CS8925. Lock
+CS8926. Lock
+CS8930. Lock
+CS8941. Lock
+CS8971. Lock
+CS8983. Lock
+CS6570. Lock
+
 """
 
-# Extract all unique 4-digit numbers from the dataset
-unique_numbers = set(re.findall(r'\d{4}', data))
-# pretty print the unique number list
-print(unique_numbers)
 
-# Count of unique 4-digit numbers
-unique_count = len(unique_numbers)
+def count_rooms():
+  # Extract all unique 4-digit numbers from the dataset
+  unique_numbers = set(re.findall(r'\d{4}', data))
+  # pretty print the unique number list
+  # print(unique_numbers)
 
-# Print the count of unique 4-digit numbers
-print(unique_count)
+  # Count of unique 4-digit numbers
+  unique_count = len(unique_numbers)
+
+  # Print the count of unique 4-digit numbers
+  print(unique_count)

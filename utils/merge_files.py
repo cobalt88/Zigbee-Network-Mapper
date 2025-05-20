@@ -1,6 +1,7 @@
 # Merge the contents of however many files are in the input directory with "ZigbeeStatus_Names" in the filename. 
 import os
 import time
+import pandas as pd
 
 os.makedirs('./merged_data', exist_ok=True)
 
@@ -21,6 +22,15 @@ def merge_files():
       file_to_append_to.write(file_to_open.read())
 
   convert_to_json(output_file_name)
+  merge_to_csv(output_file_name)
+
+def merge_to_csv(input_file_name):
+  output_file_name = f'merged_data_{current_timestamp}.csv'
+
+  # take the merged_files.txt file and convert it to a csv
+  df = pd.read_csv(f'./merged_data/{input_file_name}', sep="\t")
+  df.to_csv(f'./merged_data/{output_file_name}', index=False)
+
 
 
 def convert_to_json(file_name):
